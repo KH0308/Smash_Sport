@@ -1,0 +1,1014 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+
+.bdyIDX {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../img/bg_compressed.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+
+.wrapper {
+    width: 420px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, .2);
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+    color: #fff;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+}
+
+.wrapper .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    border: 2px solid grey;
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder{
+    color: white;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin-right: 4px;
+}
+
+.remember-forgot a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background: #fff;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
+}
+
+.wrapper .register-link {
+    font-size: 14.5px;
+    text-align: center;
+    margin: 20px 0 15px;
+}
+
+.register-link p a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.register-link p a:hover {
+    text-decoration: underline;
+}
+
+/*This for css nav menu side*/
+
+.bdyDB {
+    display: flex;
+    /*background: url('../img/bg.jpg') no-repeat center center fixed;*/
+    background: #fff;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 110px;
+    height: 100vh;
+    padding: 0 1.7rem;
+    color: #fff;
+    overflow: hidden;
+    transition: all 0.5s linear;
+    background: rgba(10, 208, 253, 1);
+}
+
+.sidebar:hover{
+    width: 240px;
+    transition: 0.5s;
+}
+
+/*sub menu booking*/
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    border-radius: 8px;
+    position: absolute;
+    left: 20%;
+    top: 1%;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.has-submenu:hover .submenu {
+    display: block;
+}
+
+.submenu li {
+    padding: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.submenu li a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.submenu li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.submenu li:hover a {
+    color: #fff;
+}
+
+/*sub menu purchase*/
+
+.submenuShop {
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.90);
+    border-radius: 8px;
+    position: absolute;
+    left: 20%;
+    top: 20%;
+    width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.has-submenu:hover .submenuShop {
+    display: block;
+}
+
+.submenuShop li {
+    padding: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.submenuShop li a {
+    color: #000000;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.submenuShop li:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.submenuShop li:hover a {
+    color: #fff;
+}
+
+.logo {
+    height: 80px;
+    width: 80px;
+    padding-top: 16px;
+}
+
+.logo img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.menu {
+    height: 88%;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    padding: 1rem;
+    margin: 8px 0;
+    border-radius: 8px;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu li:hover, 
+.active {
+    background: rgba(90, 90, 90, 0.418);
+}
+
+.menu a {
+    color:#000;
+    font-size: 14px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.menu a span {
+    overflow: hidden;
+}
+
+.menu a i {
+    font-size: 1.2rem;
+}
+
+.logout {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/*This for dashboard main part css*/
+
+.main--content {
+    position: relative;
+    background: #ffffff;
+    width: 100%;
+    padding: 1rem;
+}
+
+.header--wrapper img {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.header--wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #e2e2e2;
+    border-radius: 10px;
+    padding: 10px 2rem;
+    margin-bottom: 1rem;
+}
+
+.header--title {
+    color: rgba(10, 208, 253, 1);
+}
+
+.user--info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.prof--section{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.search--box {
+    background: #bbbbbb;
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 255);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+}
+
+.search--box input {
+    background: transparent;
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.search--box i {
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.search--box i:hover {
+    transform: scale(1.2);
+}
+
+/*card container*/
+
+.card--container {
+    background: #e2e2e2;
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card--wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.main--title {
+    color: rgba(10, 208, 253, 1);
+    padding-bottom: 10px;
+    font-size: 15px;
+}
+
+.payment--card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.2rem;
+    width: 290px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.5s ease-in-out;
+}
+
+.payment--card:hover {
+    transform: translateY(-5px);
+}
+
+.card--header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.amount {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    font-size: 12px;
+    font-weight: 200;
+}
+
+.amount--value {
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600px;
+}
+
+.icon {
+    color: #e2e2e2;
+    padding: 1rem;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    background: black;
+}
+
+.card--details {
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: 2px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*color palette*/
+
+.vividsky-blue {
+    background: rgba(10, 208, 253, 1);
+}
+
+.light-blue {
+    background: rgb(168, 239, 248);
+}
+
+.periwinkle-purple {
+    background: rgba(173, 169, 245, 1);
+}
+
+.rudy-blue {
+    background: rgba(122, 177, 242, 1);
+}
+
+.yilmin-blue {
+    background: rgba(42, 86, 159, 1);
+}
+
+.true-blue {
+    background: rgba(43, 105, 192, 1);
+}
+
+/* tabular data */
+
+.tabular--wrapper {
+    background: #e2e2e2;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.tabular--wrapper--feedback {
+    background: #e2e2e2;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+#tabular--wrapper--variant {
+    display: none;
+    background: #e2e2e2;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background: rgba(10, 208, 253, 1);
+    color: #fff;
+}
+
+th {
+    padding: 5px;
+    text-align: left;
+}
+
+tbody {
+    background: #fff;
+}
+
+td {
+    padding: 15px;
+    font-size: 14px;
+    color: #000;
+}
+
+tr:nth-child(even) {
+    background: rgb(168, 239, 248);
+    color: #fff;
+}
+
+tfoot {
+    background: rgba(10, 208, 253, 1);
+    font-weight: bold;
+    color: #fff;
+}
+
+tfoot td {
+    padding: 15px;
+}
+
+.table-container button {
+    color: rgba(43, 105, 192, 1);
+    background: none;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+/* Add styles for the description cell */
+.description-cell {
+    max-width: 200px; /* Adjust the max-width as needed */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Style the video link */
+td a {
+    color: rgba(43, 105, 192, 1);
+    text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+    /* Add styles for smaller screens here */
+    th, td {
+        padding: 10px; /* Decrease padding for smaller screens */
+    }
+}
+
+/*profile part*/
+
+.main--cont--prof {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    gap: 20px;
+    padding: 20px;
+}
+
+.eml-pic {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#profileImage {
+    display: flex;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.eml-pic h6 {
+    margin: 0;
+}
+
+.acc--info {
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    padding: 20px;
+    background: rgba(10, 208, 253, 1);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.acc--info h3 {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.row--info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.row--info label {
+    flex: 1;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.row--info input {
+    flex: 2;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.row--btn-edt-save {
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    margin-top: 15px;
+}
+
+.btnEdt {
+    display: block;
+    background: rgb(161, 244, 255);
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+
+.btnSave {
+    display: none;
+    background: rgb(59, 126, 207);
+    border-radius: 20px;
+    width: 100px;
+    height: 30px;
+    outline: none;
+    border: none;
+}
+
+#uploadIMG {
+    margin: 10px 0px 10px 0px;
+    display: none;
+}
+
+.image--with--icon {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: relative;
+}
+
+#pclEdt {
+    position: absolute;
+    top: 5px; /* Adjust this value to control the distance from the top */
+    right: 5px; /* Adjust this value to control the distance from the right */
+    font-size: 16px; /* Adjust the font size as needed */
+    color: #000; /* Set the color of the pencil icon */
+    background-color: #fff; /* Set the background color of the icon if needed */
+    border-radius: 50%; /* Make the icon circular */
+    padding: 5px; /* Adjust the padding as needed */
+    cursor: pointer;
+}
+
+/*status color booking and payment*/
+
+.status-active {
+    color: green;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-cancel {
+    color: red;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-pass {
+    color: orange;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-NV {
+    color: orangered;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/*court management part*/
+
+.court--wrapper {
+    background: #e2e2e2;
+    margin: 10px;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.courts-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    /* max-width: 650px; */
+    width: 80%;
+    margin: 0 auto;
+}
+
+.court {
+    width: 150px;
+    height: 150px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Closed {
+    background-color: red;
+}
+
+.Open {
+    background-color: rgba(10, 208, 253, 1);
+}
+
+#refundPopup {
+    display: none;
+}
+
+/* news part */
+
+.popup-image {
+    width: 60px; /* Adjust the width as per your design */
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.div--filter--button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.filter-options {
+    margin-bottom: 10px;
+}
+
+.btn--add--news {
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: rgba(10, 208, 253, 1);
+    color: #000;
+    cursor: pointer;
+}
+
+#status-filter {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(10, 208, 253, 1);
+    color: #000;
+}
+
+/* Styles for form wrappers */
+.form--wrapper,
+.formAdd--wrapper,
+.popup-form {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* popup message */
+#check {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(10, 208, 253, 1);
+    border: 1px solid #080808;
+    border-radius: 20px;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for form popups */
+.popup, .popup-content {
+    position: relative; /* Change to relative positioning */
+    margin: 50px auto; /* Center vertically and horizontally */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    max-height: calc(100% - 100px); /* Adjust this value as needed */
+    overflow-y: auto; /* Enable scrolling for the form */
+}
+
+.popup-close {
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    color: #ff0000;
+    font-size: 32px;
+}
+
+/* Styles for form elements */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group-shop {
+    margin-bottom: 15px;
+}
+
+.form-group-shop label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group-shop input {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    outline: none;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group input[type="date"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Styles for form actions (buttons) */
+.form-actions {
+    text-align: right;
+}
+
+.form-actions input[type="submit"],
+.form-actions button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.form-actions input[type="submit"]:hover,
+.form-actions button:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for image preview and remove button */
+.form-group img {
+    display: block;
+    margin-top: 10px;
+}
+
+.form-group button#removeEdtImgButton,
+.form-group button#removeAddImgButton {
+    background-color: #ff3333;
+    padding: 8px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-group button#removeEdtImgButton:hover,
+.form-group button#removeAddImgButton:hover {
+    background-color: #ff0000;
+}
+
+.form-actions .btnDel {
+    background-color: #ff3333;
+    padding: 8px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.form-actions .btnDel:hover {
+    background-color: #ff0000;
+}
+
+/* Styles for form popups delete */
+.formDel--wrapper{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 999;
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Styles for form popups */
+.popupDel{
+    position: relative; /* Change to relative positioning */
+    margin: 50px auto; /* Center vertically and horizontally */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    max-height: calc(50% - 100px); /* Adjust this value as needed */
+    overflow-y: auto; /* Enable scrolling for the form */
+}
+
+.popup-close {
+    display: flex;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    color: #ff0000;
+    font-size: 32px;
+}
+
+.delAction{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 10px auto;
+}
+
+.delAction button {
+    padding: 8px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
+
+.delAction button:hover {
+    background-color: #0056b3;
+}
+
+.delAction .btnDel {
+    background-color: #ff3333;
+    padding: 8px 20px;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 100px;
+    height: 40px;
+}
+
+.delAction .btnDel:hover {
+    background-color: #ff0000;
+}
+
+/* pie chart part */
+#paymentPieChart,
+#purchasePieChart,
+#bookingPieChart {
+    width: 200px !important; 
+    height: 200px !important;
+    overflow-x: auto;
+}
+
+.pie--wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    overflow-x: auto;
+}

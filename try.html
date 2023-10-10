@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <title>Snippet - BBBootstrap</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <canvas id="bookingPieChart"></canvas>
+    <script>
+        function createPieCharts() {
+                var bookingPieChart = new Chart(document.getElementById('bookingPieChart'), {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Valid Payment', 'Pending Payment', 'Expired Payment', 'Refund Payment'],
+                        datasets: [{
+                            data: [440.68, 0.00, 464.28, 141.48],
+                            backgroundColor: ['rgba(42, 86, 159, 1)', 'rgba(122, 177, 242, 1)',
+                                'rgba(173, 169, 245, 1)', 'rgb(168, 239, 248)'],
+                        }],
+                    },
+                    options: {
+                        title: {
+                            display: true,
+                            text: 'Booking Pie Chart', // Add your title here
+                        },
+                    },
+                });
+            }
+            createPieCharts();
+    </script>
+
+</body>
+
+</html>
